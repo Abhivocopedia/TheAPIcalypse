@@ -205,7 +205,7 @@
         }
         
         .cta-button:hover {
-            box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+            box-shadow: 极 0 25px rgba(0, 243, 255, 0.8);
             transform: translateY(-3px);
         }
         
@@ -224,8 +224,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 10% 10%, rgba(255, 0, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 90%, rgba(0, 243, 255, 0.05) 0%, transparent 20%);
+                radial-gradient(circle at 10% 10%, rgba(255, 0, 255, 0.05) 极, transparent 20%),
+                radial-gradient(circle at 90% 90%, rgba(0, 243, 255, 0.05) 极, transparent 20%);
             z-index: 0;
         }
         
@@ -308,7 +308,7 @@
         
         .activity-card:hover {
             transform: translateY(-10px);
-            border-color: var(--neon-blue);
+            border-color: var(--极-blue);
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
         }
         
@@ -320,89 +320,74 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--neon-blue);
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 极.5);
         }
         
         /* Registration Section */
         .registration {
             padding: 100px 0;
             background: var(--dark-bg);
+            text-align: center;
         }
         
-        .form-container {
+        .registration-content {
+            max-width: 800px;
+            margin: 0 auto;
             background: var(--card-bg);
             border-radius: 10px;
             padding: 40px;
-            margin-top: 50px;
             border: 1px solid rgba(0, 243, 255, 0.3);
             box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
         }
         
-        .form-group {
+        .registration h3 {
+            font-size: 1.8rem;
             margin-bottom: 20px;
+            color: var(--neon-blue);
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
+        .registration p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
         
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            background: rgba(5, 5, 16, 0.5);
-            border: 1px solid rgba(0, 243, 255, 0.3);
-            border-radius: 5px;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            transition: 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
-        }
-        
-        .form-row {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .form-row .form-group {
-            flex: 1;
-        }
-        
-        .required::after {
-            content: '*';
-            color: var(--neon-pink);
-            margin-left: 4px;
-        }
-        
-        .submit-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
+        .google-form-btn {
+            display: inline-block;
+            padding: 15px 40px;
             background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
+            font-size: 1.2rem;
             cursor: pointer;
+            text-decoration: none;
             transition: 0.3s;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
         
-        .submit-btn:hover {
-            box-shadow: 0 0 25px rgba(0, 243, 255, 0.5);
-            transform: translateY(-3px);
+        .google-form-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .google-form-btn:hover::before {
+            left: 0;
+        }
+        
+        .google-form-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.8);
+            transform: translateY(-5px);
         }
         
         /* Footer */
@@ -420,7 +405,7 @@
             margin-bottom: 30px;
         }
         
-        .footer-section {
+        .极-section {
             flex: 1;
             min-width: 250px;
         }
@@ -486,11 +471,6 @@
                 gap: 15px;
             }
             
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-            
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -520,7 +500,7 @@
         <div class="container header-content">
             <div class="logo">
                 <!-- Replace with your logo -->
-                <img src="TheAPIcalypselogo.png" alt="TheAPIcalypse Logo" style="width: 50px; height: 50px; background: linear-gradient(45deg, var(--black), var(--greay)); border-radius: 50%; display: flex; align-items: center; justify-content: center;"></div>
+                <img src="TheAPIcalypselogo.png" alt="TheAPIcalypse Logo" style="width: 50px; height: 50px; background: linear-gradient(45deg, var(--smokegreay), var(--black)); border-radius: 50%; display: flex; align-items: center; justify-content: center;"></div>
                     <i class="fas fa-code"></i>
                 </div>
                 <span class="logo-text">TheAPIcalypse</span>
@@ -562,9 +542,9 @@
                     <p>To create a platform where tech enthusiasts can connect, share knowledge, work on projects together, and participate in events that challenge and enhance their skills.</p>
                     
                     <h3>About Your Friend</h3>
-                    <p>Abhinandan Bhatta is a passionate Electronics & Communication Engineering student with strong interests in coding, IoT, and problem-solving. With a small scale experience in multiple hackathons and projects, Abhinandan made TheAPIcalypse to bring together like-minded individuals to learn and grow together.</p>
+                    <p>Abhinandan Bhatta is a passionate Electronics & Communication Engineering student with strong interests in coding, IoT, and problem-solving. With a small scale experience in hackathons and projects, Abhinandan made TheAPIcalypse to bring together like-minded individuals to learn and grow together.</p>
                     
-                    <p>As a winner of DSU DevHack 2.0 and multiple science competitions, Abhinandana brings leadership and technical expertise to the community.</p>
+                    
                 </div>
                 <div class="about-image">
                     <!-- Replace with your image -->
@@ -624,65 +604,13 @@
             <div class="section-title">
                 <h2>Join The Community</h2>
             </div>
-            <div class="form-container">
-                <form id="registration-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" class="required">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="required">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone" class="required">Mobile Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="skills" class="required">Skills</label>
-                            <input type="text" id="skills" name="skills" placeholder="e.g., Python, Web Development, IoT" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="college" class="required">College Name</label>
-                            <input type="text" id="college" name="college" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="course" class="required">Course</label>
-                            <input type="text" id="course" name="course" placeholder="e.g., B.Tech CSE" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="year" class="required">Year/Semester</label>
-                            <input type="text" id="year" name="year" placeholder="e.g., 2nd Year/3rd Sem" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="achievements">Achievements (Optional)</label>
-                        <textarea id="achievements" name="achievements" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="projects">Projects (Optional)</label>
-                        <textarea id="projects" name="projects" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="hobbies">Hobbies (Optional)</label>
-                        <textarea id="hobbies" name="hobbies" rows="2"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Register Now</button>
-                </form>
+            <div class="registration-content">
+                <h3>Register Now</h3>
+                <p>Become a part of TheAPIcalypse community by filling out our registration form. We're excited to have you on board!</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSehgIGgnU4zJjaz_rr9aJy_0J9W4EWAzr5-bMnFu2rQ2pttQg/viewform?usp=header" target="_blank" class="google-form-btn">
+                    Register Here <i class="fas fa-external-link-alt"></i>
+                </a>
+                <p style="margin-top: 20px; font-size: 0.9rem;">You'll be redirected to our Google Form to complete your registration</p>
             </div>
         </div>
     </section>
@@ -705,7 +633,6 @@
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-envelope"></i> abhivocopedia@gmail.com</p>
-                    
                 </div>
                 
                 <div class="footer-section">
@@ -723,54 +650,6 @@
     </footer>
 
     <script>
-        // Form submission handling
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Form data collection
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                skills: document.getElementById('skills').value,
-                college: document.getElementById('college').value,
-                course: document.getElementById('course').value,
-                year: document.getElementById('year').value,
-                achievements: document.getElementById('achievements').value,
-                projects: document.getElementById('projects').value,
-                hobbies: document.getElementById('hobbies').value
-            };
-            
-            // Here you would typically send this data to a server
-            // For demonstration, we'll show a success message
-            alert('Thank you for registering! We will contact you soon.');
-            
-            // Reset form
-            this.reset();
-            
-            // In a real implementation, you would send the data to your server
-            // which would then email it to abhivocopedia@gmail.com
-            // Example using fetch API (commented out as it requires backend):
-            /*
-            fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Registration successful!');
-                this.reset();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Registration failed. Please try again.');
-            });
-            */
-        });
-        
         // Add some interactive effects
         document.querySelectorAll('.activity-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
@@ -779,6 +658,21 @@
             
             card.addEventListener('mouseleave', () => {
                 card.classList.remove('glow-effect');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
